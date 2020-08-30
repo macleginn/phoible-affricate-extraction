@@ -115,25 +115,6 @@ def oppositions(consonants, feature, others_same=True):
     return results
 
 
-
-def some_affricates(inventory):
-    """
-    Returns true if there are voiced affricates that have
-    corresponding voiceless affricates and fricatives but not 
-    corresponding voiced fricatives.
-    """
-
-    # Check if there is a voice opposition in affricates.
-    affricates = get_manners(inventory, ['affricate'])
-    if oppositions(affricates, 'voice') == {}:
-        return False
-
-    # Check if there is a voice opposition in stops.
-    stops = get_manners(inventory, ['stop'])
-    if oppositions(stops, 'voice') == {}:
-        return False
-
-
 if __name__ == '__main__':
     from collections import defaultdict
 
