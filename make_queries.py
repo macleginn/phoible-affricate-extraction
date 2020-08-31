@@ -44,7 +44,7 @@ def feature_difference(p1, p2):
 
 
 def get_inventory(data_frame, glottocode):
-    return list(d.loc[d.Glottocode == glottocode].Phoneme)
+    return list(data_frame.loc[data_frame.Glottocode == glottocode].Phoneme)
 
 
 def all_segments_parsable(inventory):
